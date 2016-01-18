@@ -5,33 +5,29 @@ public class Task01 {
 	public static boolean check(String list) {
 		if (list == null) {
 			return false;
+			//maybe throw exception
 		}
-		boolean frame = false;
-		if (list.charAt(0) == '(' && list.charAt(list.length() - 1) == ')') {
-			frame = true;
-		}
-		int numberOfOpen = 0;
-		int numberOfClose = 0;
+		int openedClosedBracketDifference = 0;
 		for (int i = 0; i < list.length(); i++) {
 			if (list.charAt(i) == '(') {
-				numberOfOpen++;
+				openedClosedBracketDifference++;
 			}
 			if (list.charAt(i) == ')') {
-				numberOfClose++;
+				openedClosedBracketDifference--;
 			}
-			if (numberOfOpen < numberOfClose) {
+			if (openedClosedBracketDifference < 0) {
 				return false;
 			}
 		}
-		if (numberOfOpen == numberOfClose && frame) {
-			return true;
-		}
-		return false;
+		return (openedClosedBracketDifference == 0);
+		
 	}
 	
 	public static void main(String[] args) {
-
-		System.out.println(check("()()())))((())("));
-
+		System.out.println(check("()"));
+		System.out.println(check("(()))("));
 	}
 }
+
+
+
