@@ -1,0 +1,26 @@
+package monday;
+
+import java.io.File;
+import java.nio.file.Path;
+
+public class WorldCountResult {
+
+	private int numberOfWords;
+	private int numberOfCharacters;
+	private int numberOfLines;
+
+	private WorldCountResult(int w, int c, int l){
+		this.numberOfWords = w;
+		this.numberOfCharacters = c;
+		this.numberOfLines = l;
+	}
+
+	public WorldCountResult worlCount(Path path) {
+		return null;
+	}
+	
+	public WorldCountResult worlCount(File file) {
+		return null;
+	}
+
+}
