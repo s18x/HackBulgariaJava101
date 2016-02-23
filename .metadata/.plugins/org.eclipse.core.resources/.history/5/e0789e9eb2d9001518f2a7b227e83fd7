@@ -1,0 +1,22 @@
+package com.hackbulgaria.requests;
+
+public class Producer<T> implements Runnable {
+
+	private BlockingQueue<T> queue;
+	private T[] queueElements;
+
+	public Producer(BlockingQueue<T> queue, T[] queueElements) {
+		super();
+		this.queue = queue;
+		this.queueElements = queueElements;
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i < queueElements.length; i++) {
+			this.queue.put(queueElements[i]);
+		}
+		queue.put(null);
+	}
+
+}

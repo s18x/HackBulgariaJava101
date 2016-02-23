@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;DroneDelivery/src/com.hackbulgaria.requests&apos;&#x0A;- Original project: &apos;Week09&apos;&#x0A;- Destination element: &apos;DroneDelivery/src/com.hackbulgaria.requests&apos;&#x0A;- Original elements:&#x0A;     wednesday.Producer.java&#x0A;     wednesday.Consumer.java&#x0A;     wednesday.BlockingQueue.java" description="Copy compilation units" destination="=DroneDelivery/src&lt;com.hackbulgaria.requests" element1="/src&lt;wednesday{Producer.java" element2="/src&lt;wednesday{Consumer.java" element3="/src&lt;wednesday{BlockingQueue.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1456178779408" units="3" version="1.0"/>
+</session>

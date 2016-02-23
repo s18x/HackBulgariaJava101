@@ -1,0 +1,30 @@
+package week10;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+
+public class ParallelMinimalPointCalculations {
+
+	public List<Point> generatePoints() {
+		List<Point> list = new LinkedList<>();
+		Random random = new Random();
+		for (int i = 0; i < 100_000; i++) {
+			list.add(new Point(random.nextDouble() * 10_000, random.nextDouble() * 10_000));
+		}
+		return list;
+	}
+
+	public Map<Point, Point> getNearestPoints(List<Point> generatedPoints) {
+		Map<Point, Point> pMap = new HashMap<>();
+		for (Point pointOrigin : generatedPoints) {
+			for (Point point : generatedPoints) {
+				
+			}
+		}
+		return null;
+	}
+
+}

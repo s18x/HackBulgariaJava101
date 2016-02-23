@@ -1,0 +1,34 @@
+package week10;
+
+import java.util.Iterator;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		int size = 10_000;
+		int numberOfElements = 1_000_000;
+		int numberOfProducers = 20;
+		int numberOfConsumers = 20;
+		MeasurementTool<Integer> queue = new MeasurementTool<>(size);
+		for (int i = 0; i <= numberOfProducers; i++) {
+			(new Thread(new Producer<Integer>(queue, 1))).start();
+		}
+
+		long startTime = System.nanoTime();
+		ParallelMinimalPointCalculations obj = new ParallelMinimalPointCalculations();
+		Map<Point, Point> pMap = obj.getNearestPoints(obj.generatePoints());
+		Iterator it = pMap.entrySet().iterator();
+		while(it.hasNext()) {
+			Map.Entry<Point, Point> pair = (Map.Entry<Point, Point>)it.next();
+			System.out.println("(" + pair.getKey() + ", " + pair.getValue() + ")");
+			it.remove();
+		}
+		long endTime = System.nanoTime();
+		System.out.println("Took: " + (endTime - startTime) / 1_000_000_000 + "s");
+
+
+	}
+
+}

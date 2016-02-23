@@ -1,0 +1,12 @@
+package week10;
+
+import java.util.List;
+
+public class ParallelMinimalPointCalculations {
+
+	public List<Point> generatePoints() {
+		
+		return null;
+	}
+
+}

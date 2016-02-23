@@ -1,0 +1,20 @@
+package monday;
+
+import java.awt.Image;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+
+public class Picture {
+
+	public static void main(String[] args) throws IOException {
+
+		Image image = null;
+		URL url = new URL("http://d3dsacqprgcsqh.cloudfront.net/photo/aozrdx0_700b.jpg");
+		image = ImageIO.read(url);
+
+	}
+
+}

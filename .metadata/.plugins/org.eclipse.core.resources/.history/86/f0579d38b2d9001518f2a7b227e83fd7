@@ -1,0 +1,39 @@
+package com.hackbulgaria.requests;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BlockingQueue<T> {
+
+	private Queue<T> queue;
+	private static final int MAX_SIZE = 10_000;
+
+	public BlockingQueue() {
+		queue = new LinkedList<>();
+	}
+
+	public synchronized T poll() {
+		while(queue.isEmpty()) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		notifyAll();
+		return queue.remove();
+	}
+
+	public synchronized void put(T element) {
+		while(queue.size() == MAX_SIZE) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		queue.add(element);
+		notifyAll();
+	}
+
+}

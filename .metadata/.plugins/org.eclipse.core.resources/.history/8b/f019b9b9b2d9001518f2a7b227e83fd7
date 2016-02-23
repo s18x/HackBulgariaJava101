@@ -1,0 +1,27 @@
+package com.hackbulgaria.requests;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Producer<T> implements Runnable {
+
+	private BlockingQueue<T> queue;
+	private T queueElements;
+
+	public Producer(BlockingQueue<T> queue, T queueElements) {
+		super();
+		this.queue = queue;
+		this.queueElements = queueElements;
+	}
+
+	@Override
+	public void run() {
+		while (queueElements != null) {
+			try {
+				this.queue.put(queueElements);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+package week08;
+
+public class Main {
+
+	public static class MyThread extends Thread {
+		
+		public void star() {
+			System.out.println("Why Hellow There!");
+		}
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		MyThread thread = new MyThread();
+		thread.start();
+		thread.join();
+		System.out.println("Hellow to you too!");
+	}
+}

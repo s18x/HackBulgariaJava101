@@ -1,0 +1,21 @@
+package com.hackbulgaria.requests;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Consumer<T> implements Runnable {
+
+	private BlockingQueue<T> requestsQueue;
+
+	public Consumer(BlockingQueue<T> queue) {
+		super();
+		this.requestsQueue = queue;
+	}
+
+	@Override
+	public void run() {
+		for (T i = requestsQueue.poll(); !(i == null); i = requestsQueue.poll()) {
+			System.out.format("Delivery Received: %d%n", i);
+		}
+	}
+
+}

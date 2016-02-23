@@ -1,0 +1,24 @@
+package week10;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class Consumer<T> implements Runnable {
+
+	private MeasurementTool<T> queue;
+	private static AtomicInteger consumedElements;
+
+	public Consumer(MeasurementTool<T> queue) {
+		super();
+		this.queue = queue;
+	}
+
+	@Override
+	public void run() {
+		while (!(consumedElements.addAndGet(0) == queue.size())) {
+			queue.poll();
+			consumedElements.incrementAndGet();
+			notifyAll();
+		}
+	}
+
+}

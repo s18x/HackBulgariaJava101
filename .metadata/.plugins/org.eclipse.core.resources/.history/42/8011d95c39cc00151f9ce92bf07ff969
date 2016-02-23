@@ -1,0 +1,14 @@
+package week10;
+
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class CountOddNumbers<T> {
+
+	private CopyOnWriteArrayList<T> numbers = new CopyOnWriteArrayList<>();
+
+	public CountOddNumbers(CopyOnWriteArrayList<T> numbers) {
+		super();
+		this.numbers = numbers;
+	}
+
+}
