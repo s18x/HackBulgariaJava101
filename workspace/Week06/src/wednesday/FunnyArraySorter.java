@@ -1,0 +1,6 @@
+package wednesday;
+
+public class FunnyArraySorter {
+
+	
+}
