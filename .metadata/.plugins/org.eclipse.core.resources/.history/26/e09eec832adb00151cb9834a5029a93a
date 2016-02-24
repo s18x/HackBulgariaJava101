@@ -1,0 +1,14 @@
+package com.hackbulgaria.requests_executor;
+
+public class DroneManager {
+
+	private OurCity city;
+
+	public DroneManager(OurCity city) {
+		super();
+		this.city = city;
+	}
+
+	
+
+}

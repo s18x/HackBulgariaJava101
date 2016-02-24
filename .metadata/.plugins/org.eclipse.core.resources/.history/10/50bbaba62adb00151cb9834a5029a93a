@@ -10,12 +10,10 @@ public class DroneManager {
 	public DroneManager(OurCity city, Delivery deliveryRequest) {
 		super();
 		this.city = city;
-		this.deliveryRequest = deliveryRequest;
 	}
 
 	public static double weightChek() {
-		double deliveryWeight;
-		return 0;
+		delive
 	}
 
 }

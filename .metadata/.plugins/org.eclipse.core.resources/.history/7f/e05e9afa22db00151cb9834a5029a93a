@@ -1,46 +1,32 @@
 package com.hackbulgaria.requests_parsing;
 
-import java.util.Calendar;
-
-public class Delivery {
+public class Supply {
 
 	private final int ID;
-	private Calendar timestamp;
-	private Address addressCoordinates;
+	private String timestamp;
 	private Products[] products;
 
-	public Delivery(int iD, Calendar timestamp, Address addressCoordinates, Products[] products) {
+	public Supply(int iD, String timestamp, Products[] products) {
 		super();
 		ID = iD;
 		this.setTimestamp(timestamp);
 		this.setProducts(products);
 	}
 
-	public Calendar getTimestamp() {
-		Calendar copy = this.timestamp;
+	public String getTimestamp() {
+		String copy = this.timestamp;
 		return copy;
 	}
 
-	public void setTimestamp(Calendar timestamp) {
+	public void setTimestamp(String timestamp) {
 		if (timestamp.equals(null)) {
+			throw new IllegalArgumentException("No Supply Timestamp!");
+		}
+		else if (timestamp.isEmpty()) {
 			throw new IllegalArgumentException("No Supply Timestamp!");
 		}
 		else {
 			this.timestamp = timestamp;
-		}
-	}
-
-	public Address getAdresCoordinates() {
-		Address copy = this.addressCoordinates;
-		return copy;
-	}
-
-	public void setAdresCoordinates(Address adresCoordinates) {
-		if (adresCoordinates.equals(null)) {
-			throw new IllegalArgumentException("No Supply Address!");
-		}
-		else {
-			this.addressCoordinates = adresCoordinates;
 		}
 	}
 
@@ -66,7 +52,7 @@ public class Delivery {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp.getTime().toString() + "\n").append("Address: " + addressCoordinates + "\n").append("Products: \n");
+		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp + "\n").append("Products: ");
 		for (int i = 0; i < products.length; i++) {
 			sb.append(products[i].toString() + "\n\n");
 		}

@@ -1,28 +1,27 @@
 package com.hackbulgaria.requests_parsing;
 
+import java.util.Calendar;
+
 public class Supply {
 
 	private final int ID;
-	private String timestamp;
+	private Calendar timestamp;
 	private Products[] products;
 
-	public Supply(int iD, String timestamp, Products[] products) {
+	public Supply(int iD, Calendar timestamp, Products[] products) {
 		super();
 		ID = iD;
 		this.setTimestamp(timestamp);
 		this.setProducts(products);
 	}
 
-	public String getTimestamp() {
-		String copy = this.timestamp;
+	public Calendar getTimestamp() {
+		Calendar copy = this.timestamp;
 		return copy;
 	}
 
-	public void setTimestamp(String timestamp) {
+	public void setTimestamp(Calendar timestamp) {
 		if (timestamp.equals(null)) {
-			throw new IllegalArgumentException("No Supply Timestamp!");
-		}
-		else if (timestamp.isEmpty()) {
 			throw new IllegalArgumentException("No Supply Timestamp!");
 		}
 		else {
@@ -52,7 +51,7 @@ public class Supply {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp + "\n").append("Products: ");
+		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp.getTime().toString() + "\n").append("Products: ");
 		for (int i = 0; i < products.length; i++) {
 			sb.append(products[i].toString() + "\n\n");
 		}

@@ -1,0 +1,8 @@
+package com.hackbulgaria.requests_executor;
+
+public class DroneManager {
+
+	private OurCity city;
+	
+
+}

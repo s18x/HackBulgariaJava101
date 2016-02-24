@@ -14,7 +14,7 @@ public class DroneManager {
 	}
 
 	public static double weightChek() {
-		double deliveryWeight;
+		
 		return 0;
 	}
 

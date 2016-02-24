@@ -66,7 +66,7 @@ public class Delivery {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp.getTime().toString() + "\n").append("Address: " + addressCoordinates + "\n").append("Products: \n");
+		sb.append("Supply:\n").append("ID: " + ID + "\n").append("Time Stamp: " + timestamp + "\n").append("Address: " + addressCoordinates + "\n").append("Products: \n");
 		for (int i = 0; i < products.length; i++) {
 			sb.append(products[i].toString() + "\n\n");
 		}
