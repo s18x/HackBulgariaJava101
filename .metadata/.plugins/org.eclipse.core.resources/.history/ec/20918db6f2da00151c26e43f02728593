@@ -1,0 +1,25 @@
+package com.hackbulgaria.requests_executor;
+
+public class OurCity {
+
+	private String name;
+	private static final int[][] CITY = new int[1000][1000];
+
+	public OurCity(String name) {
+		super();
+		this.setName(name);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public static int[][] getCity() {
+		return CITY;
+	}
+
+}

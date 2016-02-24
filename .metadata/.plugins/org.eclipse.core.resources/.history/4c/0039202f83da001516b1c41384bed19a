@@ -1,0 +1,8 @@
+package com.hackbulgaria.requests_parsing;
+
+public class Products {
+
+	private String name;
+	private double weightPerUnit;
+
+}

@@ -1,0 +1,38 @@
+package com.hackbulgaria.requests_parsing;
+
+public class Products {
+
+	private String name;
+	private double weightPerUnit;
+
+	public Products(String name, double weightPerUnit) {
+		super();
+		this.setName(name);
+		this.setWeightPerUnit(weightPerUnit);
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		if (name == null) {
+			throw new IllegalArgumentException("No Product Name!");
+		}
+		else if (name.isEmpty()) {
+			throw new IllegalArgumentException("No Product Name!");
+		}
+		else {
+			this.name = name;
+		}
+	}
+
+	public double getWeightPerUnit() {
+		return weightPerUnit;
+	}
+
+	public void setWeightPerUnit(double weightPerUnit) {
+		this.weightPerUnit = weightPerUnit;
+	}
+
+}

@@ -6,3 +6,5 @@
 1456259645891	Rename package 'com.hackbulgaria.requests'
 1456259720198	Rename type 'Consumer'
 1456259819018	Rename type 'Producer'
+1456269095699	Rename type 'Product'
+1456309921781	Rename field 'adresCoordinates'

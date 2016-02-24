@@ -88,9 +88,9 @@
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="585" key="DIALOG_WIDTH"/>
+		<item value="597" key="DIALOG_WIDTH"/>
 		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="735" key="DIALOG_HEIGHT"/>
+		<item value="734" key="DIALOG_HEIGHT"/>
 		<item value="127" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -107,9 +107,9 @@
 		</section>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item value="585" key="DIALOG_WIDTH"/>
+		<item value="591" key="DIALOG_WIDTH"/>
 		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="735" key="DIALOG_HEIGHT"/>
+		<item value="734" key="DIALOG_HEIGHT"/>
 		<item value="127" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -127,7 +127,7 @@
 		<item value="false" key="SynchronizedModifier"/>
 		<item value="false" key="Blocks"/>
 		<item value="false" key="Comments"/>
-		<item value="0" key="VisibilityModifier"/>
+		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="InstanceOf"/>
 		<item value="0" key="StringStyle"/>
 		<item value="0" key="ToStringTemplateSelected"/>

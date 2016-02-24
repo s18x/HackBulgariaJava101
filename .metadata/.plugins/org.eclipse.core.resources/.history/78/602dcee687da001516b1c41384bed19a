@@ -1,0 +1,44 @@
+package com.hackbulgaria.requests_parsing;
+
+public class Supply {
+
+	private final int ID;
+	private String timestamp;
+	private Products[] products;
+
+	public Supply(int iD, String timestamp, Products[] products) {
+		super();
+		ID = iD;
+		this.setTimestamp(timestamp);
+		this.setProducts(products);
+	}
+
+	public String getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(String timestamp) {
+		if (timestamp == null) {
+			throw new IllegalArgumentException("No Supply Timestamp!");
+		}
+		else if (timestamp.isEmpty()) {
+			throw new IllegalArgumentException("No Supply Timestamp!");
+		}
+		else {
+			this.timestamp = timestamp;
+		}
+	}
+
+	public Products[] getProducts() {
+		return products;
+	}
+
+	public void setProducts(Products[] products) {
+		this.products = products;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+}
